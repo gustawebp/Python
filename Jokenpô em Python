@@ -1,0 +1,30 @@
+import random
+from time import sleep
+#crie um programa que jogue Jokenpô com você
+lista = ['pedra', 'papel', 'tesoura']
+elemento = random.choice(lista)
+
+print('-=-'*5, 'JOKENPÔ', '-=-'*5)
+obj = input('Escolha pedra, papel ou tesoura:').lower()
+print('JO...')
+sleep(1)
+print('KEN...')
+sleep(1)
+print('PÔ!!!')
+sleep(1)
+print('Eu escolho:', elemento)
+
+if elemento == 'pedra' and obj == 'papel':
+    print('Você venceu! Papel ganha de Pedra.')
+elif elemento == 'papel' and obj == 'pedra':
+    print('Eu venci! Papel ganha de Pedra.')
+elif elemento == 'tesoura' and obj == 'papael':
+    print('Eu venci! Tesoura ganha de Papel.')
+elif elemento == 'papel' and obj == 'tesoura':
+    print('Você venceu! Tesoura ganha de Papel.')
+elif elemento == 'pedra' and obj == 'tesoura':
+    print('Eu venci! Pedra ganha de Tesoura.')
+elif elemento == 'tesoura' and obj == 'pedra':
+    print('Você venceu! Pedra ganha de Tesoura.')
+else:
+    print('Deu empate, vamos tentar novamente!')
